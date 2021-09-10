@@ -74,19 +74,19 @@ Build an API inside the `api` folder with endpoints for:
 - [X] `[GET] /api/resources`
   - Example of response body: `[{"resource_id":1,"resource_name":"foo","resource_description":null}]`
 
-- [ ] `[POST] /api/projects`
+- [X] `[POST] /api/projects`
   - Even though `project_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Example of response body: `{"project_id":1,"project_name":"bar","project_description":null,"project_completed":false}`
 
-- [ ] `[GET] /api/projects`
+- [X] `[GET] /api/projects`
   - Even though `project_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Example of response body: `[{"project_id":1,"project_name":"bar","project_description":null,"project_completed":false}]`
 
-- [ ] `[POST] /api/tasks`
+- [X] `[POST] /api/tasks`
   - Even though `task_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Example of response body: `{"task_id":1,"task_description":"baz","task_notes":null,"task_completed":false,"project_id:1}`
 
-- [ ] `[GET] /api/tasks`
+- [X] `[GET] /api/tasks`
   - Even though `task_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Each task must include `project_name` and `project_description`
   - Example of response body: `[{"task_id":1,"task_description":"baz","task_notes":null,"task_completed":false,"project_name:"bar","project_description":null}]`
@@ -94,20 +94,21 @@ Build an API inside the `api` folder with endpoints for:
 **Notes:**
 
 - Run tests locally by executing `npm run test`. Tests will be very broken until you flesh out the project sufficiently.
-- You are welcome to create additional files for middlewares etc, but **do not move or rename existing files** or folders.
+- You are welcome to create additional files for middleware's etc, but **do not move or rename existing files** or folders.
 - Do not make changes to your `package.json` except to add **additional** dependencies and scripts. Do not update existing packages.
 - In your solution, it is essential that you follow best practices and produce clean and professional results.
 
 ## Submission format
 
-- [ ] Submit via Codegrade by pushing commits to your `main` branch on Github.
-- [ ] Check Codegrade before the deadline to compare its results against your local tests.
-- [ ] Check Codegrade on the days following the Sprint Challenge for reviewer feedback.
-- [ ] New commits will be evaluated by Codegrade if pushed _before_ the sprint challenge deadline.
+- [X] Submit via Codegrade by pushing commits to your `main` branch on Github.
+- [X] Check Codegrade before the deadline to compare its results against your local tests.
+- [X] Check Codegrade on the days following the Sprint Challenge for reviewer feedback.
+- [X] New commits will be evaluated by Codegrade if pushed _before_ the sprint challenge deadline.
 
 ## Interview Questions
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
+(copying and pasting these to the side to practice)
 
 1. Explain the difference between Relational Databases and SQL.
 2. Why do tables need a Primary Key?

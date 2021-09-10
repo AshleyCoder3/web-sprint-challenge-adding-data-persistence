@@ -1,18 +1,20 @@
 const express = require('express');
-//const Project = require('./model');
+const Project = require('./model');
 const router = express.Router();
 
-router.get('/', (req, res, next) => {
+router.get('/', async (req, res, next) => {
   try {
-    res.json('GET in project is Working');
+    const allProj = await Project.getProject();
+    res.json(allProj);
   } catch (err) {
     next(err);
   }
 });
 
-router.post('/', (req, res, next) => {
+router.post('/', async (req, res, next) => {
   try {
-    res.json('POST in project is Working');
+    const newProject = await Project.createProject(req.body);
+    res.status(201).json(newProject);
   } catch (err) {
     next(err);
   }
