@@ -1,9 +1,12 @@
+const db = require('../../data/dbConfig');
+
 const getResource = () => {
-  return 'get';
+  return db('resources');
 };
 
-const createResource = () => {
-  return 'create';
+const createResource = async (resource) => {
+  const newResource = await db('resources').insert(resource);
+  return getResource(newResource);
 };
 
 module.exports = {

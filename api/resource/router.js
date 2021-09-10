@@ -1,18 +1,20 @@
 const express = require('express');
-//const Resource = require('./model');
+const Resource = require('./model');
 const router = express.Router();
 
-router.get('/', (req, res, next) => {
+router.get('/', async (req, res, next) => {
   try {
-    res.json('GET in resource is Working');
+    const all = await Resource.getResource();
+    res.json(all);
   } catch (err) {
     next(err);
   }
 });
 
-router.post('/', (req, res, next) => {
+router.post('/', async (req, res, next) => {
   try {
-    res.json('POST in resource is Working');
+    const newResource = await Resource.createResource(req.body);
+    res.status(201).json(newResource);
   } catch (err) {
     next(err);
   }
