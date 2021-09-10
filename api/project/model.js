@@ -1,12 +1,12 @@
 const getProject = () => {
-    return 'get';
+  return 'get';
 };
 
 const createProject = () => {
-    return 'create';
+  return 'create';
 };
 
 module.exports = {
-    getProject,
-    createProject
+  getProject,
+  createProject
 };

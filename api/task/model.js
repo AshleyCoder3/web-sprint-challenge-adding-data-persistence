@@ -1,13 +1,13 @@
 const getTask = () => {
-    return 'getTask';
+  return 'getTask';
 };
 
 
 const createTask = () => {
-    return 'createTask';
+  return 'createTask';
 };
 
 module.exports = {
-    getTask,
-    createTask
+  getTask,
+  createTask
 };

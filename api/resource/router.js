@@ -3,19 +3,19 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res, next) => {
-    try {
-        res.json('GET in resource is Working');
-    } catch (err) {
-        next(err);
-    }
+  try {
+    res.json('GET in resource is Working');
+  } catch (err) {
+    next(err);
+  }
 });
 
 router.post('/', (req, res, next) => {
-    try {
-        res.json('POST in resource is Working');
-    } catch (err) {
-        next(err);
-    }
+  try {
+    res.json('POST in resource is Working');
+  } catch (err) {
+    next(err);
+  }
 });
 
 module.exports = router;

@@ -1,12 +1,12 @@
 const getResource = () => {
-    return 'get';
+  return 'get';
 };
 
 const createResource = () => {
-    return 'create';
+  return 'create';
 };
 
 module.exports = {
-    getResource,
-    createResource
+  getResource,
+  createResource
 };
