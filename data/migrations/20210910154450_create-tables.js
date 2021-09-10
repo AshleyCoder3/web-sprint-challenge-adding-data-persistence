@@ -3,8 +3,8 @@ exports.up = function (knex) {
   return knex.schema
     .createTable('projects', tbl => {
       tbl.increments('project_id');
-      tbl.string('project_name').notNullable();
-      tbl.string('project_description');
+      tbl.string('project_name', 225).notNullable();
+      tbl.string('project_description', 255);
       tbl.boolean('project_completed');
     })
     .createTable('resources', tbl => {
@@ -49,7 +49,7 @@ exports.up = function (knex) {
 exports.down = async function (knex) {
   await knex.schema
     .dropTableIfExists('project_resources')
-    .dropTableIfExists('task')
-    .dropTableIfExists('resource')
-    .dropTableIfExists('project');
+    .dropTableIfExists('tasks')
+    .dropTableIfExists('resources')
+    .dropTableIfExists('projects');
 };

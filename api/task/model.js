@@ -1,3 +1,5 @@
+const db = require('../../data/dbConfig');
+
 const getTask = () => {
   return 'getTask';
 };
