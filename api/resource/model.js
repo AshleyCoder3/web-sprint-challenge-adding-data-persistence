@@ -1,1 +1,12 @@
-// build your `Resource` model here
+const getResource = () => {
+    return 'get';
+};
+
+const createResource = () => {
+    return 'create';
+};
+
+module.exports = {
+    getResource,
+    createResource
+};
