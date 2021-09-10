@@ -7,14 +7,14 @@ exports.up = function (knex) {
       tbl.string('project_description');
       tbl.boolean('project_completed');
     })
-    .createTable('resource', tbl => {
+    .createTable('resources', tbl => {
       tbl.increments('resource_id');
       tbl.string('resource_name')
         .unique()
         .notNullable();
       tbl.string('resource_description');
     })
-    .createTable('task', tbl => {
+    .createTable('tasks', tbl => {
       tbl.increments('task_id');
       tbl.string('task_description').notNullable();
       tbl.string('task_notes');
